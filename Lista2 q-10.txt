@@ -1,0 +1,14 @@
+import tkinter as tk
+from tkinter import messagebox
+def exibir_previsao_tempo():
+    cidade = "Recife-PE"
+    temperatura = "27°C"
+    condicao = "Pacialmente nublado"
+    previsao_label.config(text=f"Previsão do Tempo em {cidade}:\nTemperatura: {temperatura}\nCondição: {condicao}")
+janela = tk.Tk()
+janela.title("Previsão do Tempo - Recife")
+obter_previsao_button = tk.Button(janela, text="Previsão para Recife", command=exibir_previsao_tempo)
+obter_previsao_button.pack()
+previsao_label = tk.Label(janela, text="")
+previsao_label.pack()
+janela.mainloop()
